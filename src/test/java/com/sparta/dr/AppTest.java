@@ -6,9 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class AppTest {
-    public AppTest() {
-    }
-
     @Test
     @DisplayName("both arrays have the same number of values")
     void bothArraysHaveTheSameNumberOfValues() {
