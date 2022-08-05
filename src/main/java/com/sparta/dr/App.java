@@ -1,7 +1,6 @@
 package com.sparta.dr;
 
 import java.util.Arrays;
-
 public class App {
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 10, 15, 23, 40, 41, 46, 99, 200, 300, 400};

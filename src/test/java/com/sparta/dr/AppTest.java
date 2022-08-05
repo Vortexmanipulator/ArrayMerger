@@ -4,7 +4,6 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 public class AppTest {
     @Test
     @DisplayName("both arrays have the same number of values")
@@ -15,7 +14,6 @@ public class AppTest {
         String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
         Assertions.assertEquals(expected, answer);
     }
-
     @Test
     @DisplayName("Array one has more values")
     void arrayOneHasMoreValues() {
@@ -25,7 +23,6 @@ public class AppTest {
         String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
         Assertions.assertEquals(expected, answer);
     }
-
     @Test
     @DisplayName("Array two has more values")
     void arrayTwoHasMoreValues() {
@@ -35,17 +32,15 @@ public class AppTest {
         String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
         Assertions.assertEquals(expected, answer);
     }
-
     @Test
-    @DisplayName("Array has negative vallues")
-    void arrayHasNegativeVallues() {
+    @DisplayName("Array has negative values")
+    void arrayHasNegativeValues() {
         int[] a1 = new int[]{-5, -2, 5, 7, 9};
         int[] a2 = new int[]{-15, -4, 6, 8, 10, 12, 14, 16};
         String expected = "[-15, -5, -4, -2, 5, 6, 7, 8, 9, 10, 12, 14, 16]";
         String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
         Assertions.assertEquals(expected, answer);
     }
-
     @Test
     @DisplayName("Arrays have the same values")
     void arraysHaveTheSameValues() {
@@ -55,4 +50,16 @@ public class AppTest {
         String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
         Assertions.assertEquals(expected, answer);
     }
+
+    @Test
+    @DisplayName("Given all the values in array one are the same")
+    void givenAllTheValuesInArrayOneAreTheSame() {
+        int[] a1 = new int[]{15, 15, 15, 15, 15, 15, 15, 15};
+        int[] a2 = new int[]{-15, -4, 6, 8, 10, 12, 14, 16};
+
+        String expected = "[-15, -4, 6, 8, 10, 12, 14, 15, 15, 15, 15, 15, 15, 15, 15, 16]";
+        String answer = Arrays.toString(ArrayMerger.arrayMerge(a1, a2));
+        Assertions.assertEquals(expected, answer);
+    }
+
 }

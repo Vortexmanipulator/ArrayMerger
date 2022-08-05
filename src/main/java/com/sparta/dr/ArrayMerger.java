@@ -1,9 +1,6 @@
 package com.sparta.dr;
 
 public class ArrayMerger {
-    public ArrayMerger() {
-    }
-
     static int[] arrayMerge(int[] array1, int[] array2) {
         int count1 = 0;
         int count2 = 0;
